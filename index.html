@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>万圣节抽符</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript">/*不写text/javascript也可以*/
+		//函数
+		function showpage(num)
+		{
+			document.getElementById("page1").style.display = "none";
+			document.getElementById("page2").style.display = "none";
+			document.getElementById("page3").style.display = "none";
+			document.getElementById("page4").style.display = "none";
+			if(num==1)
+			document.getElementById("page1").style.display = "block";
+			else if(num==2)
+			document.getElementById("page2").style.display = "block";
+			else if(num==3)
+			document.getElementById("page3").style.display = "block";
+			else if(num==4)
+			{
+				document.getElementById("page4").style.display = "block";
+				//随机换符
+				var charmdress=[];
+				charmdress[0]="img/charm1.jpg";
+				charmdress[1]="img/charm2.jpg";
+				charmdress[2]="img/charm3.jpg";
+				charmdress[3]="img/charm4.jpg";
+				charmdress[4]="img/charm5.jpg";
+				charmdress[5]="img/charm6.jpg";
+				charmdress[6]="img/charm7.jpg";
+				var randomnum = Math.round(Math.random()*7);
+				document.getElementById("page4").style.backgroundImage="url("+charmdress[randomnum]+")";
+			}
+
+		}
+		function showcharm(num)
+		{
+			//显示第四页，隐藏第三页
+			/*document.getElementById("page3").style.display = "none";
+			document.getElementById("page4").style.display = "block";*/
+			showpage(4);
+			//根据num换背景图
+			if(num==1)
+			document.getElementById("page4").style.backgroundImage="url(img/charm1.jpg)";
+			else if(num==2)
+			document.getElementById("page4").style.backgroundImage="url(img/charm2.jpg)";
+			else if(num==3)
+			document.getElementById("page4").style.backgroundImage="url(img/charm3.jpg)";
+			else if(num==4)
+			document.getElementById("page4").style.backgroundImage="url(img/charm4.jpg)";
+			else if(num==5)
+			document.getElementById("page4").style.backgroundImage="url(img/charm5.jpg)";
+			else if(num==6)
+			document.getElementById("page4").style.backgroundImage="url(img/charm6.jpg)";
+			else if(num==7)
+			document.getElementById("page4").style.backgroundImage="url(img/charm7.jpg)";
+			
+		}
+		/*	function showpage2()
+			{
+				//======================
+				// 隐藏page1
+				// 显示page2
+				// ========================
+				document.getElementById("page1").style.display = "none";//根据id找到标记,并修改display属性
+				document.getElementById("page2").style.display = "block";
+			}
+			function showpage3()
+			{
+				document.getElementById("page2").style.display = "none";
+				document.getElementById("page3").style.display = "block";
+			}
+			function showpage4()
+			{
+				document.getElementById("page3").style.display = "none";
+				document.getElementById("page4").style.display = "block";
+			}*/
+			
+		</script>
+	</head>
+	<body>
+		<audio src="audio/AKB48.mp3" autoplay="autoplay"></audio><!--插入音频自动播放-->
+		<div id ="page1">
+			<img id="title" src = "img/title.png" /><!--插入图片，在css文件中调整图片位置-->
+			<img id = "box" src="img/box.png" onclick="showpage(2);"/><!--调用函数-->
+		</div>
+		<div id = "page2">
+				<img id="pumpkin" src="img/pumpkin.png"  /><!--平级目录找文件-->
+				<img id="startGame" src="img/startGame.jpg" onclick="showpage(3);" />
+		</div>
+		<div id="page3">
+			<img id="charm01" src="img/1.png" onclick="showpage(4);" />
+			<img id="charm02" src="img/2.png" onclick="showpage(4);" />
+			<img id="charm03" src="img/3.png" onclick="showpage(4);" />
+			<img id="charm04" src="img/4.png" onclick="showpage(4);" />
+			<img id="charm05" src="img/5.png" onclick="showpage(4);" />
+			<img id="charm06" src="img/6.png" onclick="showpage(4);" />
+			<img id="charm07" src="img/7.png" onclick="showpage(4);" />
+		</div>
+		<div id="page4">
+			<img src="img/back.png" onclick="showpage(3);" style="position: fixed; left:10px; top:10px"/>
+		</div>
+	
+	</body>
+</html>

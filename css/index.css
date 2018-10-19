@@ -1,0 +1,255 @@
+/*普通选择器，选择所有的同类型元素*/
+html
+{
+	height:100%;
+}
+body
+{
+	height:100%;
+}
+div
+{
+	height:100%;
+}
+/*类选择器，.开头，需要引用相应的class即可生效*/
+/*.picture
+{}*/
+/*id选择器，#开头。选择一个元素*/
+#page1
+{
+	background-image:url(../img/halloween1.jpg);/*作为背景图*/
+	background-repeat:no-repeat;/*不重复出现*/
+	background-size:100% 100%;/*调整图片尺寸大小使占满全屏*/
+
+}
+#title
+{
+	position:fixed;/*固定定位*/
+	top:50px;
+	left:300px;
+	animation: mymove01 1s;/*应用动画*/
+}
+#box
+{
+	position:fixed;
+	bottom: 250px;
+	left: 300px;
+	animation: mymove02 1s infinite;/*动画循环播放*/
+}
+#page2
+{
+	background-image:url(../img/halloween2.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	display:none;
+}
+#pumpkin
+{
+	position:fixed;
+	top:50px;
+	left:280px;
+}
+#startGame
+{
+	position:fixed;
+	bottom: 250px;
+	left:380px;
+}
+#page3
+{
+	background-image:url(../img/halloweenMain.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	display:none;
+}
+#charm01
+{
+	position:fixed;
+	left:50px;
+	top:100px;
+	animation: movecharm01 5s infinite;
+}
+#charm02
+{
+	position:fixed;
+	left:250px;
+	top:450px;
+	animation: movecharm02 10s infinite;
+}
+#charm03
+{
+	position:fixed;
+	left:50px;
+	top:650px;
+	animation: movecharm03 15s infinite;
+}
+#charm04
+{
+	position:fixed;
+	left:500px;
+	top:50px;
+	animation: movecharm04 10s infinite;
+}
+#charm05
+{
+	position:fixed;
+	left:400px;
+	top:900px;
+	animation:movecharm05 5s infinite;
+}
+#charm06
+{
+	position:fixed;
+	left:300px;
+	top:800px;
+	animation:movecharm06 10s infinite;
+}
+#charm07
+{
+	position:fixed;
+	right:50px;
+	bottom:300px;
+	animation:movecharm07 3s infinite;
+}
+#page4
+{
+	background-image:url(../img/charm5.jpg);/*返回到上级目录找文件../代表向上级目录寻找目标文件*/
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	display:none;
+}
+/*写动画*/
+@keyframes mymove01{
+	from{
+		opacity:0;/*透明度为0,完全透明*/
+	}
+	to{
+		opacity:1;
+	}
+}
+/*多个点的动画*/
+@keyframes mymove02{
+	0%{
+		left:300px;
+	}
+	50%{
+		left:320px;
+	}
+	100%{
+		left:300px;
+	}
+}
+@keyframes movecharm01{
+	0%{
+		left:50px;
+		top:100px;
+	}
+	30%{
+		left:50px;
+		top:200px;
+	}
+	60%{
+	left:100px;
+	top:150px;
+	}
+	100%{
+	left:50px;
+	top:100px;
+}
+}
+@keyframes movecharm02{
+	0%{
+		left:250px;
+		top:400px;
+	}
+	30%{
+		left:300px;
+		top:450px;
+	}
+	60%{
+		left:350px;
+		top:450px;
+	}
+	100%{
+		left:250px;
+		top:400px;
+	}
+}
+@keyframes movecharm03{
+	0%{
+		left:50px;
+		top:650px;
+	}
+	50%{
+		left:500px;
+		top:750px;
+	}
+	100%{
+		left:50px;
+		top:650px;
+	}
+}
+@keyframes movecharm04{
+	0%{
+		left:500px;
+		top:50px;
+	}
+	10%{
+		left:650px;
+		top:100px;
+	}
+	50%{
+		left:650px;
+		top:650px;
+	}
+	90%
+	{
+		left:650px;
+		top:100px;
+	}
+	100%
+	{
+		left:500px;
+		top:50px;
+	}
+	
+}
+@keyframes movecharm05{
+	0%{
+		left:400px;
+		top:900px;
+	}
+	50%{
+		left:400px;
+		top:950px;
+	}
+	100%{
+		left:400px;
+		top:900px;
+	}
+}
+@keyframes movecharm06{
+	0%{
+		left:300px;
+		top:800px;
+	}
+	50%{
+		left:300px;
+		top:1200px;
+	}
+	100%
+	{
+		left:300px;
+		top:800px;
+	}
+}
+@keyframes movecharm07{
+	0%{
+		width:300px;
+		height:300px;
+	}
+	100%{
+		width:20px;
+		height:20px;
+	}
+}

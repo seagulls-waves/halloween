@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//在脚本中定义函数，没有顺序问题，推荐放在head里面
+			function showinfo()
+			{
+				alert(100);//弹出对话框，内容为100
+				alert(200);
+				alert(300);
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			document.write("hello world");
+		var now= new Date();//获取当前时间
+		document.write(now);
+		</script>
+			
+		<!--script在哪个位置插入脚本就在哪个位置运行-->
+		<br />
+		hello China!
+		<br />
+		<script type="text/javascript">
+//			document.write("hello you!");
+			var now = new Date();
+			var hour = now.getHours();
+			document.write("现在时间是:"+hour+"点"+"<br />");
+			if(hour<12)
+			{
+				document.write("上午好！");
+			}
+			else
+			{
+				document.write("下午好！");
+			}
+		</script>
+		<br />
+		<img src="img/box.png" onclick="showinfo();"/><!--调用函数-->
+	</body>
+</html>
